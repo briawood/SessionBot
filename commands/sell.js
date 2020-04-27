@@ -1,5 +1,8 @@
-module.exports = (message, name) => {
-	var msg = "Selling **" + (name || "") + "**"
+module.exports = (client, message) => {
+	console.log(message);
+	console.log(message.author.username);
+	var salesQueue = salesQueue || {};
+	var msg = "Selling something"
 	message.channel.send(msg).then(function (reply) {
 //		reply.react("👢")
         message.delete()
