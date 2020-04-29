@@ -1,13 +1,13 @@
-const Discord = require("discord.js")
+const Discord = require('discord.js')
 const configFile = `${__dirname}/config.json`
 const config = require(configFile)
-const fs = require("fs")
+const fs = require('fs')
 const client = new Discord.Client()
 
-fs.readdir("./events/", (err, files) => {
+fs.readdir('./events/', (err, files) => {
 	files.forEach(file => {
 		const eventHandler = require(`./events/${file}`)
-		const eventName = file.split(".")[0]
+		const eventName = file.split('.')[0]
 		client.on(eventName, arg => eventHandler(client, arg))
 	})
 })
