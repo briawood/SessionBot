@@ -12,14 +12,14 @@ module.exports = (client, message) => {
 	let saleitems = message.content.substr(message.content.indexOf(' ')+1)
 
 	if (saleitems === '!sell') {
-		message.channel.send('Please enter what you intend to sell such as bunker and 4 mcs.').then(msg => {
+		message.channel.send('Please enter what you intend to sell such as a bunker and 4 mcs.').then(msg => {
 			message.delete(5000)
 			msg.delete(5000)
-			return
 		})
 		.catch(function(err) {
 			console.log(err)
 		})
+		return
 	}
 
 	let time = new Date()
