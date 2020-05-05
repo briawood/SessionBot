@@ -83,7 +83,7 @@ module.exports = (client, message) => {
 	
 		let embed = new Discord.RichEmbed()
 		.setTitle("Sales Queue")
-		.setColor(0x00AE86)
+		.setColor(0x451a96)
 		.setDescription(msg)
 		.setFooter("Click the cash bag below when you begin your sale, and again when you are finished.")
 
